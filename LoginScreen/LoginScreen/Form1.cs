@@ -24,7 +24,7 @@ namespace LoginScreen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text=="admin" && txtPassword.Text=="admin")
+            if (txtUserName.Text=="admin" && txtPassword.Text=="123")
             {
                 new Form2().Show();
                 this.Hide();
@@ -33,24 +33,24 @@ namespace LoginScreen
 
             else
             {
-                if (txtUserName.Text != "admin" && txtPassword.Text != "admin")
+                if (txtUserName.Text != "admin" && txtPassword.Text != "123")
                 {
-                    MessageBox.Show("Usuario e senha incorretos, tente novamente");
+                    MessageBox.Show("Usuario e senha incorretos, tente novamente.");
                     txtUserName.Clear();
                     txtPassword.Clear();
                     txtUserName.Focus();
                 }
 
-                if (txtUserName.Text != "admin" && txtPassword.Text == "admin")
+                if (txtUserName.Text != "admin" && txtPassword.Text == "123")
                 {
-                    MessageBox.Show("Usuario incorreto, insira novamente");
+                    MessageBox.Show($"Usuario '{txtUserName.Text}' incorreto, tente novamente.");
                     txtUserName.Clear();
                     txtUserName.Focus();
                 }
 
                 if (txtPassword.Text != "admin" && txtUserName.Text == "admin")
                 {
-                    MessageBox.Show("Senha incorreta, insira novamente");
+                    MessageBox.Show("Senha incorreta, tente novamente.");
                     txtPassword.Clear();
                     txtPassword.Focus();                  
                 }
