@@ -26,5 +26,11 @@ namespace LoginScreen
         {
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
+        }
     }
 }
